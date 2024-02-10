@@ -8,11 +8,10 @@ function Header({ user }: { user: UserDataType }) {
     if (user.isLoggedIn && user.data?.role === 'admin')
       return (
         <>
+          <div className='seperator'></div>
           <Link to='/admin'>Admin</Link>
           <div className='seperator'></div>
           <Link to='/admin/about'>Admin About</Link>
-          <div className='seperator'></div>
-          <Link to='/admin/new'>New</Link>
         </>
       )
     return <></>
