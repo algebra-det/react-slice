@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
+import { useAppSelector } from '@/store/hooks'
 import { publicRoutes, userRoutes, adminRoutes } from '@/router/routes'
-import { UserDataType } from '@/store/userSlice'
 
-function RouterProvider({ user }: { user: UserDataType }) {
+function RouterProvider() {
+  const user = useAppSelector(state => state.user)
   return (
     <Routes>
       {publicRoutes.map(({ path, component: Component }) => (

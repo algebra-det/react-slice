@@ -2,8 +2,7 @@ import { UserDataType } from '@/store/userSlice'
 import { Link } from 'react-router-dom'
 
 function Header({ user }: { user: UserDataType }) {
-  console.log('Component updated')
-
+  console.log('Header Rerendering')
   const adminLinks = () => {
     if (user.isLoggedIn && user.data?.role === 'admin')
       return (
