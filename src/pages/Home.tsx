@@ -17,12 +17,13 @@ function Home() {
     dispather(logoutUser())
   }
   return (
-    <div>
-      <h1>Home</h1>
-      <Counter />
-      <button onClick={setUserToStore}>Set User</button>
-      <br></br>
-      <button onClick={removeUser}>Remove User</button>
+    <div className='h-screen flex justify-center items-center'>
+      <div>
+        <Counter />
+        <button onClick={setUserToStore}>Toggle user</button>
+        <br></br>
+        <button onClick={removeUser}>Remove User</button>
+      </div>
     </div>
   )
 }

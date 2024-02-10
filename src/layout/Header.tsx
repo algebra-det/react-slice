@@ -9,7 +9,9 @@ function Header({ user }: { user: UserDataType }) {
       return (
         <>
           <Link to='/admin'>Admin</Link>
+          <div className='seperator'></div>
           <Link to='/admin/about'>Admin About</Link>
+          <div className='seperator'></div>
           <Link to='/admin/new'>New</Link>
         </>
       )
@@ -17,11 +19,13 @@ function Header({ user }: { user: UserDataType }) {
   }
 
   return (
-    <div className='flex justify-between'>
-      <Link to='/'>Home</Link>
-      <div>
-        <Link to='/about'>About</Link>
-        {adminLinks()}
+    <div className='py-2 px-12 h-8 text-xl'>
+      <div className='flex justify-between'>
+        <Link to='/'>Home</Link>
+        <div className='flex justify-end gap-2'>
+          <Link to='/about'>About</Link>
+          {adminLinks()}
+        </div>
       </div>
     </div>
   )

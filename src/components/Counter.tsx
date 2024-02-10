@@ -9,7 +9,7 @@ function Counter() {
         className='border rounded bg-slate-900 px-4 py-1  mt-4'
         onClick={() => setCounter(counter + 1)}
       >
-        Update
+        Update Counter
       </button>
     </div>
   )
