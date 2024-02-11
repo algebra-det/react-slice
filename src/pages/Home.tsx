@@ -17,7 +17,7 @@ function Home() {
     dispather(logoutUser())
   }
   return (
-    <div className='h-screen flex justify-center items-center'>
+    <div className='h-screen flex justify-center items-center text-white'>
       <div>
         <Counter />
         <button onClick={setUserToStore}>Toggle user</button>

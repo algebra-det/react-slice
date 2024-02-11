@@ -17,7 +17,7 @@ function Header({ user }: { user: UserDataType }) {
   }
 
   return (
-    <div className='py-2 px-12 h-8 text-xl'>
+    <div className='py-2 px-12 h-8 text-xl text-white '>
       <div className='flex justify-between'>
         <Link to='/'>Home</Link>
         <div className='flex justify-end gap-2'>
