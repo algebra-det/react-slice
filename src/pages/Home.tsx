@@ -3,7 +3,9 @@ import { useAppDispatch } from '@/store/hooks'
 import { loginUser, logoutUser } from '@/store/userSlice'
 
 function Home() {
-  const dispather = useAppDispatch()
+  console.log("Home rendered")
+  const dispatcher = useAppDispatch()
+
   const setUserToStore = () => {
     const newUser = {
       id: 1,
@@ -11,10 +13,10 @@ function Home() {
       email: 'akash@gmail.com',
       role: 'admin'
     }
-    dispather(loginUser(newUser))
+    dispatcher(loginUser(newUser))
   }
   const removeUser = () => {
-    dispather(logoutUser())
+    dispatcher(logoutUser())
   }
   return (
     <div className='h-screen flex justify-center items-center text-white'>

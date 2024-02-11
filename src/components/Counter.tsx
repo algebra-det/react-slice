@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 
 function Counter() {
+  console.log("Counter rendered")
   const [counter, setCounter] = useState(0)
   return (
     <div>
@@ -15,4 +16,4 @@ function Counter() {
   )
 }
 
-export default Counter
+export default memo(Counter)

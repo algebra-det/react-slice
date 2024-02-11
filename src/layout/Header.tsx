@@ -1,7 +1,8 @@
-import { UserDataType } from '@/store/userSlice'
+import { useAppSelector } from '@/store/hooks'
 import { Link } from 'react-router-dom'
 
-function Header({ user }: { user: UserDataType }) {
+function Header() {
+  const user = useAppSelector(state => state.user)
   console.log('Header Rerendering')
   const adminLinks = () => {
     if (user.isLoggedIn && user.data?.role === 'admin')
