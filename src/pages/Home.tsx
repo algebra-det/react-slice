@@ -3,7 +3,7 @@ import { useAppDispatch } from '@/store/hooks'
 import { loginUser, logoutUser } from '@/store/userSlice'
 
 function Home() {
-  console.log("Home rendered")
+  console.log('Home rendered')
   const dispatcher = useAppDispatch()
 
   const setUserToStore = () => {
@@ -22,9 +22,18 @@ function Home() {
     <div className='h-screen flex justify-center items-center text-white'>
       <div>
         <Counter />
-        <button onClick={setUserToStore}>Toggle user</button>
-        <br></br>
-        <button onClick={removeUser}>Remove User</button>
+        <button
+          className='mt-3 p-2 border-2 bg-slate-700 border-slate-700 hover:border-slate-400'
+          onClick={setUserToStore}
+        >
+          Toggle user
+        </button>
+        <button
+          className='ml-3 p-2 border-2 bg-slate-700 border-slate-700 hover:border-slate-400'
+          onClick={removeUser}
+        >
+          Remove User
+        </button>
       </div>
     </div>
   )
