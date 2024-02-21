@@ -1,15 +1,9 @@
 import React, { useState, useEffect, memo } from 'react'
-
-type Todo = {
-  id: number
-  title: string
-  completed: false
-  userId: number
-}
+import { Todo } from '@/types/Todo'
 
 const CounterComponent = memo(Counter)
 
-function Counter({children}: {children?: React.ReactElement}) {
+function Counter({ children }: { children?: React.ReactElement }) {
   console.log('Counter rendered')
   const [counter, setCounter] = useState(0)
   const [todo, setTodo] = useState({} as Todo)
@@ -35,9 +29,7 @@ function Counter({children}: {children?: React.ReactElement}) {
       </button>
       <br />
       {JSON.stringify(todo)}
-      <div className="mt-4">
-        {children}
-      </div>
+      <div className='mt-4'>{children}</div>
     </div>
   )
 }
