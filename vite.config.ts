@@ -4,6 +4,8 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // uncomment  below line to have relative baseURL, by default it's '/' which makes it absolute
+  // base: '',
   plugins: [react()],
   resolve: {
     alias: {
