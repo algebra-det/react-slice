@@ -1,4 +1,4 @@
-import Datatable from '@/components/Table/Datatable1'
+import Datatable from '@/components/Table/Datatable'
 import { Todo } from '@/types/Todo'
 
 const UserTable = () => {
