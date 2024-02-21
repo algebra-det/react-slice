@@ -1,4 +1,4 @@
-import { useState, useEffect, memo } from 'react'
+import React, { useState, useEffect, memo } from 'react'
 
 type Todo = {
   id: number
@@ -9,7 +9,7 @@ type Todo = {
 
 const CounterComponent = memo(Counter)
 
-function Counter() {
+function Counter({children}: {children?: React.ReactElement}) {
   console.log('Counter rendered')
   const [counter, setCounter] = useState(0)
   const [todo, setTodo] = useState({} as Todo)
@@ -28,13 +28,16 @@ function Counter() {
     <div>
       <h1 className='text-2xl'>Counter : {counter}</h1>
       <button
-        className=' border-2 border-slate-900 rounded bg-slate-900 px-4 py-1  mt-4 hover:border-slate-400'
+        className='my-2 border-2 border-slate-900 rounded bg-slate-900 px-4 py-1  mt-4 hover:border-slate-400'
         onClick={() => setCounter(counter + 1)}
       >
         Update Counter
       </button>
       <br />
       {JSON.stringify(todo)}
+      <div className="mt-4">
+        {children}
+      </div>
     </div>
   )
 }

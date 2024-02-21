@@ -1,4 +1,4 @@
-import { About, Home, Profile } from '@/pages'
+import { About, Home, Profile, UserTable } from '@/pages'
 
 const userRoutes = [
   {
@@ -14,6 +14,11 @@ const userRoutes = [
 ]
 
 const adminRoutes = [
+  {
+    path: 'table',
+    name: 'table',
+    component: UserTable
+  },
   {
     path: '',
     name: 'Admin',

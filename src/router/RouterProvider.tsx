@@ -15,7 +15,7 @@ function RouterProvider() {
         ))}
       </Route>
       {user && (
-        <Route path='/admin'>
+        <Route path='/admin/*'>
           {adminRoutes.map(({ path, component: Component }) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
